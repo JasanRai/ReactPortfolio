@@ -16,11 +16,11 @@ import MailIcon from "@mui/icons-material/Mail";
 import { Avatar } from "@mui/material";
 import AvaImg from "../images/pngegg.png";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 export default function DrawerLeft() {
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", autoMargin: 0 }}>
       <CssBaseline />
       <AppBar
         position="fixed"
