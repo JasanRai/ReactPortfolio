@@ -25,7 +25,14 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar
+      position="static"
+      style={{
+        border: "1px solid",
+        borderColor: "#1667b7",
+        borderRadius: "10px",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

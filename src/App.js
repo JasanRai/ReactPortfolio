@@ -3,6 +3,7 @@ import Info from "./components/Info";
 import Skills from "./components/Skills";
 import React from "react";
 import Navbar from "./components/Navbar";
+import Qualification from "./components/Qualification";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Info />
       <Skills />
+      <Qualification />
     </div>
   );
 }

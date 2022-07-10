@@ -11,6 +11,9 @@ function Info() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        border: "2px solid",
+        borderColor: "#e0e0e0",
+        borderRadius: "10px",
       }}
     >
       <video
@@ -18,7 +21,12 @@ function Info() {
         autoPlay
         loop
         muted
-        style={{ width: "100%", height: "100vh", objectFit: "fill" }}
+        style={{
+          width: "100%",
+          height: "100vh",
+          objectFit: "fill",
+          borderRadius: "10px",
+        }}
       />
       <div
         style={{
@@ -31,10 +39,10 @@ function Info() {
         <Box
           sx={{
             width: "95%",
-            height: "85vh",
+            height: "100vh",
           }}
         >
-          <Box sx={{}}>
+          <Box sx={{ height: "30%" }}>
             <Typography
               sx={{
                 height: "100%",
@@ -49,6 +57,10 @@ function Info() {
             >
               Introduction
             </Typography>
+          </Box>
+          <div
+            style={{ width: "80%", marginRight: "auto", marginLeft: "auto" }}
+          >
             <Grid container sx={{ display: "flex", alignItems: "center" }}>
               <Grid
                 item
@@ -100,7 +112,7 @@ function Info() {
                 </Box>
               </Grid>
             </Grid>
-          </Box>
+          </div>
         </Box>
       </div>
     </div>

@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     fontSize: 30,
     marginBottom: "2rem",
     marginTop: "2rem",
+    textDecoration: "underline",
   },
   skillsList: {
     display: "flex",
@@ -24,7 +25,16 @@ const useStyles = makeStyles({
 function Skills() {
   const classes = useStyles();
   return (
-    <div style={{ marginTop: 20 }}>
+    <div
+      style={{
+        height: "1330px",
+        width: "100%",
+        backgroundColor: "#eee",
+        border: "2px solid",
+        borderColor: "#e0e0e0",
+        borderRadius: "10px",
+      }}
+    >
       <Typography
         variant="h2"
         sx={{
@@ -35,41 +45,44 @@ function Skills() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          height: "35%",
         }}
       >
         Technical Skills
       </Typography>
-      <Grid container>
-        <Grid item xs={4}>
-          <Typography className={classes.skillsHeader}>
-            Programming Language
-          </Typography>
-          <Typography className={classes.skillsList}>HTML/CSS</Typography>
-          <Typography className={classes.skillsList}>Express</Typography>
-          <Typography className={classes.skillsList}>SQL</Typography>
-          <Typography className={classes.skillsList}>Javascript</Typography>
-          <Typography className={classes.skillsList}>MongoDB</Typography>
+      <div style={{ width: "60%", marginRight: "auto", marginLeft: "auto" }}>
+        <Grid container>
+          <Grid item xs={4}>
+            <Typography className={classes.skillsHeader}>
+              Programming Language
+            </Typography>
+            <Typography className={classes.skillsList}>HTML/CSS</Typography>
+            <Typography className={classes.skillsList}>Express</Typography>
+            <Typography className={classes.skillsList}>SQL</Typography>
+            <Typography className={classes.skillsList}>Javascript</Typography>
+            <Typography className={classes.skillsList}>MongoDB</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography className={classes.skillsHeader}>
+              Technology Tools
+            </Typography>
+            <Typography className={classes.skillsList}>ReactJS</Typography>
+            <Typography className={classes.skillsList}>MaterialUI</Typography>
+            <Typography className={classes.skillsList}>MongoAtlas</Typography>
+            <Typography className={classes.skillsList}>NodeJS</Typography>
+            <Typography className={classes.skillsList}>Axios</Typography>
+            <Typography className={classes.skillsList}>Postman</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography className={classes.skillsHeader}>Others</Typography>
+            <Typography className={classes.skillsList}>Trello</Typography>
+            <Typography className={classes.skillsList}>Slack</Typography>
+            <Typography className={classes.skillsList}>Github</Typography>
+            <Typography className={classes.skillsList}>VSCode</Typography>
+            <Typography className={classes.skillsList}>Figma</Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={4}>
-          <Typography className={classes.skillsHeader}>
-            Technology Tools
-          </Typography>
-          <Typography className={classes.skillsList}>ReactJS</Typography>
-          <Typography className={classes.skillsList}>MaterialUI</Typography>
-          <Typography className={classes.skillsList}>MongoAtlas</Typography>
-          <Typography className={classes.skillsList}>NodeJS</Typography>
-          <Typography className={classes.skillsList}>Axios</Typography>
-          <Typography className={classes.skillsList}>Postman</Typography>
-        </Grid>
-        <Grid item xs={4}>
-          <Typography className={classes.skillsHeader}>Others</Typography>
-          <Typography className={classes.skillsList}>Trello</Typography>
-          <Typography className={classes.skillsList}>Slack</Typography>
-          <Typography className={classes.skillsList}>Github</Typography>
-          <Typography className={classes.skillsList}>VSCode</Typography>
-          <Typography className={classes.skillsList}>Figma</Typography>
-        </Grid>
-      </Grid>
+      </div>
     </div>
   );
 }
