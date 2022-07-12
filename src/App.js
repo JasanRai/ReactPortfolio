@@ -1,5 +1,4 @@
-import DrawerLeft from "./components/DrawerLeft";
-import Info from "./components/Info";
+import Intro from "./components/Intro";
 import Skills from "./components/Skills";
 import React from "react";
 import Navbar from "./components/Navbar";
@@ -9,7 +8,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Info />
+      <Intro />
       <Skills />
       <Qualification />
     </div>

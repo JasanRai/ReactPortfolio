@@ -1,10 +1,10 @@
-import { Box, CardMedia, Grid, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
-import AvaImg from "../images/pngegg.png";
+import AvaImg from "../images/Profile.jpeg";
 import InfoVideo from "../videos/video.mp4";
 function Info() {
   return (
-    <div
+    <Card
       style={{
         width: "100%",
         height: "100vh",
@@ -58,8 +58,16 @@ function Info() {
               Introduction
             </Typography>
           </Box>
-          <div
-            style={{ width: "80%", marginRight: "auto", marginLeft: "auto" }}
+          <Card
+            style={{
+              backgroundColor: "rgba(86,190,255,0.7)",
+              // width: "80%",
+              // height: "40%",
+              marginRight: "auto",
+              marginLeft: "auto",
+              padding: "3rem",
+              borderRadius: 10,
+            }}
           >
             <Grid container sx={{ display: "flex", alignItems: "center" }}>
               <Grid
@@ -101,21 +109,26 @@ function Info() {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={6}>
-                <Box sx={{ display: "flex", justifyContent: "end" }}>
-                  <img
-                    src={AvaImg}
-                    alt="Ava"
-                    width={"50%"}
-                    sx={{ color: "white" }}
+              <Grid item xs={6} sx={{ display: "flex", justifyContent: "end" }}>
+                <Card
+                  elevation={14}
+                  sx={{
+                    width: "80%",
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    image={AvaImg}
+                    alt="Profile"
+                    sx={{ maxHeight: "500px" }}
                   />
-                </Box>
+                </Card>
               </Grid>
             </Grid>
-          </div>
+          </Card>
         </Box>
       </div>
-    </div>
+    </Card>
   );
 }
 
