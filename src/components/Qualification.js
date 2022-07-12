@@ -1,7 +1,6 @@
 import { Card, CardMedia, Typography, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import GradImg from "../images/grad.png";
 import QualiBG from "../images/qualibg.jpg";
 
 const useStyles = makeStyles({
@@ -60,6 +59,7 @@ function Qualification() {
   const academic = [
     {
       name: "Bachelors in Information Technology",
+      course: "(Mobile Application Development)",
       institute: "Academy of Information Technology",
       yearCompleted: "2021",
     },
@@ -110,11 +110,26 @@ function Qualification() {
                 height: "100%",
               }}
             >
+              <Typography
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontFamily: "fantasy",
+                  fontSize: 35,
+                  fontWeight: "bolder",
+                  textDecoration: "underline",
+                  height: "10%",
+                  alignItems: "center",
+                  color: "#eee",
+                }}
+              >
+                Education
+              </Typography>
               {academic.map((aca) => {
                 return (
                   <Box
                     sx={{
-                      height: "50%",
+                      height: "40%",
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
@@ -143,6 +158,17 @@ function Qualification() {
                           }}
                         >
                           {aca.name}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            fontFamily: "fantasy",
+                            fontWeight: "bolder",
+                            fontSize: 20,
+                          }}
+                        >
+                          {aca.course}
                         </Typography>
                         <Typography
                           sx={{
