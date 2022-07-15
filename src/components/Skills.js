@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     justifyContent: "center",
     fontFamily: "fantasy",
     fontWeight: "bolder",
-    fontSize: 30,
+
     marginBottom: "2rem",
     marginTop: "2rem",
     textDecoration: "underline",
@@ -18,7 +18,6 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     fontFamily: "fantasy",
-    fontSize: 20,
     marginBottom: 20,
     color: "#eee",
   },
@@ -48,7 +47,7 @@ function Skills() {
             color: "#b4eedc",
             fontFamily: "fantasy",
             fontWeight: "bolder",
-            fontSize: 60,
+            fontSize: { xl: 60, lg: 55, md: 45, sm: 35, xs: 30 },
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -59,8 +58,8 @@ function Skills() {
         </Typography>
         <Card
           elevation={17}
-          style={{
-            width: "60%",
+          sx={{
+            width: { lg: "60%", md: "70%", sm: "80%", xs: "100%" },
             marginRight: "auto",
             marginLeft: "auto",
             backgroundColor: "rgba(0,0,15,0.8)",
@@ -71,33 +70,130 @@ function Skills() {
         >
           <Grid container>
             <Grid item xs={4}>
-              <Typography className={classes.skillsHeader}>
-                Programming Language
+              <Typography
+                className={classes.skillsHeader}
+                sx={{
+                  fontSize: { xl: 30, lg: 25, md: 21, sm: 18, xs: 16 },
+                }}
+              >
+                Language
               </Typography>
-              <Typography className={classes.skillsList}>HTML/CSS</Typography>
-              <Typography className={classes.skillsList}>Express</Typography>
-              <Typography className={classes.skillsList}>SQL</Typography>
-              <Typography className={classes.skillsList}>Javascript</Typography>
-              <Typography className={classes.skillsList}>MongoDB</Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{
+                  fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 },
+                }}
+              >
+                HTML/CSS
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Express
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                SQL
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Javascript
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                MongoDB
+              </Typography>
             </Grid>
             <Grid item xs={4}>
-              <Typography className={classes.skillsHeader}>
-                Technology Tools
+              <Typography
+                className={classes.skillsHeader}
+                sx={{
+                  fontSize: { xl: 30, lg: 25, md: 21, sm: 18, xs: 16 },
+                }}
+              >
+                Tools
               </Typography>
-              <Typography className={classes.skillsList}>ReactJS</Typography>
-              <Typography className={classes.skillsList}>MaterialUI</Typography>
-              <Typography className={classes.skillsList}>MongoAtlas</Typography>
-              <Typography className={classes.skillsList}>NodeJS</Typography>
-              <Typography className={classes.skillsList}>Axios</Typography>
-              <Typography className={classes.skillsList}>Postman</Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                ReactJS
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                MaterialUI
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                MongoAtlas
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                NodeJS
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Axios
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Postman
+              </Typography>
             </Grid>
             <Grid item xs={4}>
-              <Typography className={classes.skillsHeader}>Others</Typography>
-              <Typography className={classes.skillsList}>Trello</Typography>
-              <Typography className={classes.skillsList}>Slack</Typography>
-              <Typography className={classes.skillsList}>Github</Typography>
-              <Typography className={classes.skillsList}>VSCode</Typography>
-              <Typography className={classes.skillsList}>Figma</Typography>
+              <Typography
+                className={classes.skillsHeader}
+                sx={{ fontSize: { xl: 30, lg: 25, md: 21, sm: 18, xs: 16 } }}
+              >
+                Others
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Trello
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Slack
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Github
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                VSCode
+              </Typography>
+              <Typography
+                className={classes.skillsList}
+                sx={{ fontSize: { xl: 20, lg: 18, md: 15, sm: 14, xs: 13 } }}
+              >
+                Figma
+              </Typography>
             </Grid>
           </Grid>
         </Card>

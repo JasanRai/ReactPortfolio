@@ -8,7 +8,6 @@ const useStyles = makeStyles({
     color: "#f4f4f4",
     fontFamily: "fantasy",
     fontWeight: "Bold",
-    fontSize: 60,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -75,7 +74,6 @@ function Qualification() {
       style={{
         height: "100vh",
         width: "100%",
-        backgroundColor: "#eee",
         border: "2px solid",
         borderColor: "#e0e0e0",
         borderRadius: "10px",
@@ -85,7 +83,12 @@ function Qualification() {
       }}
     >
       <Card sx={{ height: "100%", background: "rgba(255,255,255,0)" }}>
-        <Typography className={classes.QualiHeader}>Qualification</Typography>
+        <Typography
+          className={classes.QualiHeader}
+          sx={{ fontSize: { xl: 60, lg: 55, md: 45, sm: 35, xs: 30 } }}
+        >
+          Qualification
+        </Typography>
 
         <div
           style={{
@@ -97,7 +100,7 @@ function Qualification() {
         >
           <Card
             sx={{
-              width: "60%",
+              width: { lg: "70%", md: "80%", sm: "90%", xs: "100%" },
               height: "90%",
               background: "rgba(0,0,0,0.1)",
               display: "flex",
@@ -115,7 +118,7 @@ function Qualification() {
                   display: "flex",
                   justifyContent: "center",
                   fontFamily: "fantasy",
-                  fontSize: 35,
+                  fontSize: { xl: 35, lg: 32, md: 30, sm: 28, xs: 25 },
                   fontWeight: "bolder",
                   textDecoration: "underline",
                   height: "10%",
@@ -138,7 +141,13 @@ function Qualification() {
                     <Card
                       sx={{
                         height: "90%",
-                        width: "50%",
+                        width: {
+                          xl: "40%",
+                          lg: "50%",
+                          md: "60%",
+                          sm: "70%",
+                          xs: "80%",
+                        },
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
@@ -153,7 +162,7 @@ function Qualification() {
                             justifyContent: "center",
                             fontFamily: "fantasy",
                             fontWeight: "bolder",
-                            fontSize: 25,
+                            fontSize: { lg: 24, md: 21, sm: 18, xs: 14 },
                             textDecoration: "underline",
                           }}
                         >
@@ -165,7 +174,7 @@ function Qualification() {
                             justifyContent: "center",
                             fontFamily: "fantasy",
                             fontWeight: "bolder",
-                            fontSize: 20,
+                            fontSize: { lg: 20, md: 18, sm: 16, xs: 13 },
                           }}
                         >
                           {aca.course}
@@ -175,6 +184,7 @@ function Qualification() {
                             display: "flex",
                             justifyContent: "center",
                             fontFamily: "fantasy",
+                            fontSize: { lg: 18, md: 16, sm: 13, xs: 11 },
                           }}
                         >
                           {aca.institute}
@@ -184,6 +194,7 @@ function Qualification() {
                             display: "flex",
                             justifyContent: "center",
                             fontFamily: "fantasy",
+                            fontSize: { lg: 18, md: 16, sm: 13, xs: 11 },
                           }}
                         >
                           {aca.yearCompleted}

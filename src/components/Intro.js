@@ -49,7 +49,7 @@ function Info() {
                 color: "#eee",
                 fontFamily: "fantasy",
                 fontWeight: "Bold",
-                fontSize: 60,
+                fontSize: { xl: 60, lg: 55, md: 45, sm: 35, xs: 30 },
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -59,28 +59,44 @@ function Info() {
             </Typography>
           </Box>
           <Card
-            style={{
+            sx={{
               backgroundColor: "rgba(86,190,255,0.7)",
               // width: "80%",
-              // height: "40%",
+              height: { md: "35%", xs: "40%" },
               marginRight: "auto",
               marginLeft: "auto",
               padding: "3rem",
               borderRadius: 10,
+              display: "flex",
+              alignItems: "center",
             }}
           >
-            <Grid container sx={{ display: "flex", alignItems: "center" }}>
+            <Grid
+              container
+              sx={{
+                display: { sm: "flex", xs: "block" },
+                alignItems: { sm: "center", xs: "center" },
+
+                transform: { sm: "rotate(0)", xs: "rotate(180deg)" },
+              }}
+            >
               <Grid
                 item
                 xs={6}
-                sx={{ display: "flex", justifyContent: "center" }}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginLeft: { xs: "auto" },
+                  marginRight: { xs: "auto" },
+                  transform: { sm: "rotate(0)", xs: "rotate(180deg)" },
+                }}
               >
                 <Box>
                   <Typography
                     sx={{
                       fontWeight: "Bold",
                       fontFamily: "serif",
-                      fontSize: 40,
+                      fontSize: { xl: 40, lg: 36, md: 33, sm: 30, xs: 20 },
                       color: "#fff",
                     }}
                   >
@@ -90,7 +106,7 @@ function Info() {
                     sx={{
                       fontWeight: "Bold",
                       fontFamily: "serif",
-                      fontSize: 30,
+                      fontSize: { xl: 30, lg: 26, md: 23, sm: 20, xs: 15 },
                       color: "#fff",
                     }}
                   >
@@ -100,7 +116,7 @@ function Info() {
                     sx={{
                       fontWeight: "Bold",
                       fontFamily: "serif",
-                      fontSize: 25,
+                      fontSize: { xl: 25, lg: 21, md: 18, sm: 15, xs: 10 },
                       color: "#fff",
                     }}
                   >
@@ -109,18 +125,31 @@ function Info() {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={6} sx={{ display: "flex", justifyContent: "end" }}>
+              <Grid
+                item
+                xs={6}
+                sx={{
+                  display: "flex",
+                  justifyContent: "end",
+                  marginLeft: { xs: "auto" },
+                  marginRight: { xs: "auto" },
+                  transform: { sm: "rotate(0)", xs: "rotate(180deg)" },
+                }}
+              >
                 <Card
                   elevation={14}
-                  sx={{
-                    width: "80%",
-                  }}
+                  sx={
+                    {
+                      // maxWidth: "300px",
+                      // maxHeight: "400px",
+                    }
+                  }
                 >
                   <CardMedia
                     component="img"
                     image={AvaImg}
                     alt="Profile"
-                    sx={{ maxHeight: "500px" }}
+                    sx={{ maxWidth: "300px", maxHeight: "300px" }}
                   />
                 </Card>
               </Grid>
